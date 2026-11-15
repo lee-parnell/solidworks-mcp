@@ -37,7 +37,7 @@ That's it — the installer below takes care of Python and everything else.
 Open **PowerShell** (press `Win`, type "PowerShell", press Enter) and paste:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/HarrierPigeon/Solidworks-MCP-Server/main/scripts/install.ps1 | iex"
+powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/lee-parnell/Solidworks-MCP-Server/main/scripts/install.ps1 | iex"
 ```
 
 The script installs [uv](https://docs.astral.sh/uv/) (which provides Python — you don't need Python installed), downloads the latest release, and sets up an isolated environment under `%LOCALAPPDATA%\SolidWorksMCP`. It auto-detects Claude Desktop and Codex/ChatGPT desktop and registers the server with each confidently detected client.
@@ -66,7 +66,7 @@ Prerequisites (in addition to the requirements above):
 - **[Git](https://git-scm.com/downloads/win)** (or download the repo as a ZIP from GitHub instead)
 
 ```powershell
-git clone https://github.com/HarrierPigeon/Solidworks-MCP-Server.git
+git clone https://github.com/lee-parnell/solidworks-mcp.git
 cd Solidworks-MCP-Server
 pip install -r requirements.txt
 ```
@@ -329,7 +329,7 @@ Claude  →  MCP tool call  →  server.py dispatch  →  solidworks/ module  �
 - `hole_wizard` can trigger a blocking SolidWorks dialog on some setups. The reliable fallback is a sketched circle + cut-extrude, which Claude will use if you ask.
 
 **Anything else**
-- Check `solidworks_mcp.log` next to `server.py` (easy install: `%LOCALAPPDATA%\SolidWorksMCP\app\`), then [open an issue](https://github.com/HarrierPigeon/Solidworks-MCP-Server/issues) with the relevant lines.
+- Check `solidworks_mcp.log` next to `server.py` (easy install: `%LOCALAPPDATA%\SolidWorksMCP\app\`), then [open an issue](https://github.com/lee-parnell/solidworks-mcp/issues) with the relevant lines.
 
 ## Development
 
